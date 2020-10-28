@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,26 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project';
+
+
+  constructor(private router: Router) {
+
+  }
+
+ goToHome(){
+   console.log("goToHome");
+   this.router.navigate(['/home']);
+   
+ }
+
+ goToContact(){
+   console.log("goToContact");
+
+   this.router.navigate(['/contact']);
+
+ }
+
+ 
+
+
 }
